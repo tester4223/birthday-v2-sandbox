@@ -1,0 +1,14 @@
+[
+    {
+        "name": "John Doe",
+        "birthday": "14-01",
+        "class": "A",
+        "section": "1"
+    },
+    {
+        "name": "Jane Smith",
+        "birthday": "15-01",
+        "class": "B",
+        "section": "2"
+    }
+]
