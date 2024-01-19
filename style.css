@@ -139,3 +139,17 @@ body {
   font-size: 120px;
   line-height: 120px;
 }
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+#birthdayMessage {
+    margin-top: 50px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: inline-block;
+}
