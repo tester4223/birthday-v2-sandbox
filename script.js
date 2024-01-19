@@ -40,7 +40,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    loadJson('birthdays.json')
-        .then(data => checkBirthday(data))
-        .catch(error => console.error('Error loading or parsing JSON:', error));
+    
 });
