@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (matchingBirthdays.length > 0) {
             matchingBirthdays.forEach(person => {
                 const message = `Happy Birthday ${person.name} (${person.class}-${person.section})! 🎉<br>
-                                Birthday: ${formatDateFromString(person.birthday)}`;
+                                Birthday: ${formatDateFromString(person.birthday)}`; <br>
                 birthdayMessage.innerHTML += message;
             });
         } else {
