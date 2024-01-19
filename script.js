@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const birthdayMessage = document.getElementById('birthdayMessage');
 
     
-        return response.json();
-    }
+        
 
     function formatDate(date) {
         const day = date.getDate().toString().padStart(2, '0');
