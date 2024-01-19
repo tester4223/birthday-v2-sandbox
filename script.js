@@ -30,11 +30,11 @@ document.addEventListener("DOMContentLoaded", function () {
     function formatDate(date) {
         const day = date.getDate().toString().padStart(2, '0');
         const month = (date.getMonth() + 1).toString().padStart(2, '0');
-        return `${day}-${month}`;
+        return `${day}/${month}`;
     }
 
     function formatDateFromString(dateString) {
-        const [day, month] = dateString.split('-');
-        return `${day}-${month}`;
+        const [day, month] = dateString.split('/');
+        return `${day}/${month}`;
     }
 });
