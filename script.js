@@ -2,12 +2,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const birthdayMessage = document.getElementById('birthdayMessage');
 
-    async function loadJson(url) {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
+    loadJson('birthdays.json')
+        .then(data => checkBirthday(data))
+        .catch(error => console.error('Error loading or parsing JSON:', error));
+});
     }
 
     function formatDate(date) {
