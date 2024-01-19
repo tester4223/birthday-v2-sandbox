@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function formatDateFromString(dateString) {
-        
+        const [day, month] = dateString.split('-');
         return `${day}-${month}`;
     }
 });
