@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     loadJson('birthdays.json')
         .then(data => checkBirthday(data))
         .catch(error => console.error('Error loading or parsing JSON:', error));
-});
-    }
 
     function formatDate(date) {
         const day = date.getDate().toString().padStart(2, '0');
@@ -39,6 +37,4 @@ document.addEventListener("DOMContentLoaded", function () {
             birthdayMessage.innerHTML = "No birthdays today. Check back tomorrow!";
         }
     }
-
-    
 });
