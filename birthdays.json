@@ -2,13 +2,13 @@
     {
         "name": "John Doe",
         "birthday": "19/01",
-        "class": "A",
-        "section": "1"
+        "class": "VIII",
+        "section": "A"
     },
     {
         "name": "Jane Smith",
-        "birthday": "20/01",
-        "class": "B",
-        "section": "2"
+        "birthday": "19/01",
+        "class": "VIII",
+        "section": "B"
     }
 ]
