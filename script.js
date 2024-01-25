@@ -1,40 +1,30 @@
-// script.js
-document.addEventListener("DOMContentLoaded", function () {
-    const birthdayMessage = document.getElementById('birthdayMessage');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Birthday Card</title>
+</head>
+<body>
+    <div id="card" class="card">
+        <div class="outside" onclick="flipCard()">
+            <div class="front"></div>
+            <div class="back">
+                <div class="cake">
+                    <div class="top-layer"></div>
+                    <div class="middle-layer"></div>
+                    <div class="bottom-layer"></div>
+                    <div class="candle"></div>
+                </div>
+            </div>
+        </div>
+        <div class="inside">
+            <h1>Birthday Card</h1>
+            <div id="birthdayMessage"></div>
+        </div>
+    </div>
 
-    loadJson('birthdays.json')
-        .then(data => checkBirthday(data))
-        .catch(error => console.error('Error loading or parsing JSON:', error));
-
-    function formatDate(date) {
-        const day = date.getDate().toString().padStart(2, '0');
-        const month = (date.getMonth() + 1).toString().padStart(2, '0');
-        return `${day}/${month}`;
-    }
-
-    function formatDateFromString(dateString) {
-        const [day, month] = dateString.split('/');
-        return `${day}/${month}`;
-    }
-
-    function checkBirthday(data) {
-        const today = new Date();
-        const todayFormatted = formatDate(today);
-
-        const matchingBirthdays = data.filter(person => person.birthday === todayFormatted);
-
-        if (matchingBirthdays.length > 0) {
-            const birthdayMessages = matchingBirthdays.map(person => {
-                const { name, class: studentClass, section, birthday } = person;
-                return `
-                    Happy Birthday ${name} (${studentClass}-${section})! 🎉<br>
-                    Birthday: ${formatDateFromString(birthday)}
-                `;
-            });
-
-            birthdayMessage.innerHTML = birthdayMessages.join('<br><br>');
-        } else {
-            birthdayMessage.innerHTML = "No birthdays today. Check back tomorrow!";
-        }
-    }
-});
+    <script src="script.js"></script>
+</body>
+</html>
