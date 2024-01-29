@@ -4,14 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Birthday Checker</title>
+    <title>Birthday Card</title>
 </head>
 <body>
-    <div id="birthdayMessage"></div>
-    <script src="birthday.json"></script>
+    <style>
+    .center-heading {
+      text-align: center;
+      font-size: 70px;
+    }
+  </style>
+
+ 
+<div class="center-heading">
+  <h1>Happy Birthday</h1>
+</div>
+    
+    <br>
     <script src="script.js"></script>
     <footer>
     <p>&copy; 2024 Birthday Checker</p>
   </footer>
+    <div id="card" class="card">
+        <div class="outside" onclick="flipCard()">
+            <div class="front">
+                <div class="cake">
+                    <div class="top-layer"></div>
+                    <div class="middle-layer"></div>
+                    <div class="bottom-layer"></div>
+                    <div class="candle">
+         </div>
+         </div>
+            <div class="back">
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    <div id="birthdayMessage" class="birthday-message">
 </body>
 </html>
